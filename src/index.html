@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no;email=no" />
+<title>轮播图特效</title>
+<style type="text/css">
+html{-webkit-text-size-adjust:100%}
+body,p,blockquote,ul,ol,li,h1,h2,h3,h4,h5,h6,dl,dd,input,textarea,button{margin:0; padding:0}
+body {background: #f3f3f3; font-size:14px; color:#555; font-family:Tahoma,"microsoft yahei", Geneva, sans-serif; line-height:150%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout:none;  }
+h1, h2, h3, h4, h5,em,i { font-weight:normal}
+ul, ol { list-style:none }
+em,i{ font-style: normal; }
+img{border: 0;vertical-align: middle}
+
+img[src=''] {opacity:0}
+img[data-src*='.'] { -webkit-transition:opacity .5s}
+a {text-decoration: none; color: #333333; outline:none}
+input,select,textarea{font-size:100%;border:0;outline: none; -webkit-appearance:none; resize:none;}
+
+.clear{clear:both;}
+.clearfix::after {content:''; display:block; clear: both}
+.top-banner{ width:100%; position:relative;}
+.top-banner img{ width:100%; background:url(http://ih2.zhangyue.com/zybook3/app/static/i/demo/topbannerbg.jpg?v=2147483647) no-repeat center center #fcfcfc; -webkit-background-size:120px 39px;}
+.top-banner span{ position:absolute; left:15px; bottom:5px; color:#e8554d; font-size:13px;}
+
+.change-img {width: 100%;margin: 0;-webkit-transition: left .4s ease;}
+.top-banner ul { overflow:hidden}
+.top-banner ul li{ position: relative}
+.g_slider ul li { position:absolute; top:0}
+.dot, .dots {height:12px; z-index: 100000; display: table;position: absolute;bottom:8px;right: 8px;}
+.dot-r, .dot {width:7px; height:7px; -webkit-border-radius:7px; border-radius:7px; background:rgba(0,0,0,.7);float:left;margin-right:5px;}
+.dot-active, .dot.active {background:#e8554d}
+</style>
+</head>
+<body>
+<div class="top-banner">
+    <div class="g_slider" id="slider_3270" data-js="slider">
+        <ul style="height: 336.666666666667px;">
+            <li><img  src="http://book.img.ireader.com/group1/M00/03/62/wKgHPVXogLOEEl7gAAAAAGqsquk033196877.gif?v=jCkC7oeh" ></li> 
+            <li><img src="http://book.img.ireader.com/group1/M00/00/6D/wKgHPVXlf2SEJ2q5AAAAABtBWq0881748173.gif?v=9AAAbVNk" ></li> 
+            <li><img src="http://book.img.ireader.com/group1/M00/07/1D/wKgHPlXtT0OEZkEhAAAAAKG9Oo8569219151.jpg?v=sdAMtvGH">
+            </li> 
+        </ul>
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</div>
+<script src="static/js/zepto.min.js"></script>
+<script src="static/js/slider.js"></script>
+<script>
+    $(function(){
+        $('[data-js=slider]').slider({'auto':'-1',fx:'ease-out',direction:'left',speed:600,timeout:3500})
+    });
+</script>>
+</body>
+</html>
